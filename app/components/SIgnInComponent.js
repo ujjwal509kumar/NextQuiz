@@ -3,7 +3,7 @@ import { useSession, signIn } from "next-auth/react"
 
 const SIgnInComponent = () => {
     const { data: session } = useSession()
-    console.log(session)
+    // console.log(session)
     if(!session){
     return (
         <div className="min-h-fit md:min-h-fit bg-gray-100 text-gray-900 flex justify-center">

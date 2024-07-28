@@ -84,7 +84,7 @@ const QuizComponent = () => {
                     score,
                     category 
                 });
-                console.log(response.data);
+                // console.log(response.data);
                 setScoreSaved(true);
             } catch (error) {
                 console.error('Error saving score:', error);
