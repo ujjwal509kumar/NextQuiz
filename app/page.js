@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 export default function Component() {
   const { data: session, status } = useSession();
   const [loading, setLoading] = useState(true);
-  console.log(session)
+  // console.log(session)
 
   useEffect(() => {
     if (status === "authenticated" || status === "unauthenticated") {

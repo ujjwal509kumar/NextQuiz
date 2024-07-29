@@ -1,8 +1,8 @@
-import clientPromise from '../../../lib/mongodb';
+import { connectToDatabase } from '../../../lib/mongodb';
 
 export async function GET() {
   try {
-    const client = await clientPromise;
+    const client = await connectToDatabase();
     const db = client.db('nextquiz');
     const collection = db.collection('scores');
 

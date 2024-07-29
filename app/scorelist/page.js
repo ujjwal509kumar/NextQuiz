@@ -34,16 +34,16 @@ const categoryNames = {
 const ScoreList = () => {
   const [scores, setScores] = useState([]);
 
-  const fetchScores = async () => {
-    try {
-      const response = await axios.get('/api/getscores');
-      setScores(response.data);
-    } catch (error) {
-      console.error('Error fetching scores:', error);
-    }
-  };
-
   useEffect(() => {
+    const fetchScores = async () => {
+      try {
+        const response = await axios.get('/api/getscores');
+        setScores(response.data);
+      } catch (error) {
+        console.error('Error fetching scores:', error);
+      }
+    };
+
     fetchScores();
   }, []);
 
