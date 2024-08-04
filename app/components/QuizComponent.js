@@ -84,7 +84,6 @@ const QuizComponent = () => {
                     score,
                     category 
                 });
-                // console.log(response.data);
                 setScoreSaved(true);
             } catch (error) {
                 console.error('Error saving score:', error);
@@ -156,7 +155,6 @@ const QuizComponent = () => {
                     <Link href='/scorelist'><button className="bg-blue-500 text-white px-4 py-2 mx-2 rounded">Score List</button></Link>
                     <button className="bg-red-500 text-white px-4 py-2 mx-2 rounded" onClick={() => signOut()}>Sign out</button>
                 </div>
-
             </div>
         );
     }
@@ -180,7 +178,7 @@ const QuizComponent = () => {
                     {answers.map((answer, index) => (
                         <button
                             key={index}
-                            className="border rounded px-4 py-2 hover:bg-gray-200"
+                            className="border rounded px-4 py-2"
                             onClick={(e) => handleAnswer(answer === currentQuestion.correct_answer, e)}
                             data-correct={answer === currentQuestion.correct_answer}
                         >
